@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- You can link your CSS file here if needed -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <h1>Calculator</h1>
+
+    <form  method="get">
+       
+        <label for="num1">Enter num1:</label>
+        <input type="text" id="num1" name="num1" required>
+
+        <!-- Input for num2 -->
+        <label for="num2">Enter num2:</label>
+        <input type="text" id="num2" name="num2" required>
+
+        <!-- Display the sum (readonly input) -->
+        <label for="sum">Sum:</label>
+        <input type="text" value={{ans}}>
+
+        <!-- Submit Button -->
+        <button type="submit" id="button">Calculate</button>
+    </form>
+
+</body>
+</html>

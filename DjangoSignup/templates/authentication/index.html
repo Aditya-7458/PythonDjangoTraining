@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page!</h1>
+    
+    <!-- Navigation buttons with embedded anchor tags -->
+
+    {% if user.is_authenticated %}
+    <h2>Hello {{ fname }} </h2>
+    <h3>You are logged in.</h3>
+    <button type="submit"><a href="{% url 'signout' %}">Sign Out</a></button>
+
+    {% else %}
+    <button type="submit"><a href="{% url 'signup' %}">Sign Up</a></button>
+    <button type="submit"><a href="{% url 'signin' %}">Sign in</a></button>
+    {% endif %}
+    
+</body>
+</html>
+

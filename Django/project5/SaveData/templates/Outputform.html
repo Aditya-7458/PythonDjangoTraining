@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .user-info {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Form Data</h1>
+
+    {% for n in allData %}
+    {{forloop.counter}}   <!-- for counting the number of iteration -->
+    <div class="user-info">
+       
+        <label for="name">Name:</label>
+        <input type="text" value="{{ n.name }}" readonly>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" value="{{ n.email }}" readonly>
+
+        <!-- Phone Input -->
+        <label for="phone">Phone:</label>
+        <input type="tel" value="{{ n.phone }}" readonly>
+    </div>
+    {% endfor %}
+
+</body>
+</html>
